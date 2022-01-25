@@ -5,7 +5,7 @@
  */
 public class SWEA_1859 {
     public static void main(String[] args) {
-        
+        System.out.println("hello ");
     }
     
 }
