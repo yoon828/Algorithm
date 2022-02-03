@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BJ_17478 {
+public class BOJ_17478 {
 
   // 1부터 시작
   // n번째가 되면 재귀함수에 대한 답변을 해야함.
