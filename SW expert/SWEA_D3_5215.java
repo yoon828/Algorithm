@@ -60,22 +60,3 @@ public class SWEA_D3_5215 {
     max_score(cnt + 1, sum_calo, sum_score);
   }
 }
-			return;
-		}
-
-
-		if(sum_score >max_score) {
-			max_score = sum_score;
-		}
-		
-		if (cnt == N) {
-			return;
-		}
-
-		// 유도
-		max_score(cnt + 1, sum_calo + calo[cnt], sum_score + score[cnt]);
-		max_score(cnt + 1, sum_calo, sum_score);
-
-	}
-
-}
