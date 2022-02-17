@@ -39,13 +39,6 @@ public class D5_1247_최적경로 {
 				custom[i][1] = Integer.parseInt(st.nextToken());
 			}
 
-//			for (int[] arr : custom) {
-//				for (int i : arr) {
-//					System.out.print(i + " ");
-//				}
-//				System.out.println();
-//			}
-			
 			// 최단 경로의 이동거리 찾기
 			findMinDist(0);
 			System.out.printf("#%d %d\n", test_case, min);
@@ -69,11 +62,6 @@ public class D5_1247_최적경로 {
 	}
 
 	private static int findDist(int[][] or) {
-//		System.out.println("---");
-//		for (int[] arr : or) {
-//			System.out.println(Arrays.toString(arr));
-//		}
-		
 		int sum = 0;
 		// 회사에서 첫번째 고객
 		sum += Math.abs(company[0] - or[0][0]) + Math.abs(company[1] - or[0][1]);
