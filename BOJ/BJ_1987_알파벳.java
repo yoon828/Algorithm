@@ -39,24 +39,23 @@ public class BJ_1987_알파벳 {
 		alph[map[i][j] - 'A'] = true;
 
 
-		// 기저 조건 4방향 모두 이동할 수 없는 경우
+		// 기저 조건 : 4방향 모두 이동할 수 없는 경우
 		if (!canMove(i, j,alph)) {
 			cnt = Math.max(cnt,sum);
 			return;
 		}
+		
 		// 4방 탐색
-		// 다음 알파벳이 사용 가능한 것인지 확인
 		for (int k = 0; k < 4; k++) {
 			int ii = i + move[k][0];
 			int jj = j + move[k][1];
 			
+			// 다음 알파벳이 사용 가능한 것인지 확인
 			if (canUsed(ii, jj,alph)) {
 				findMove(ii, jj,alph, sum);
 				alph[map[ii][jj] - 'A'] = false;
 			}
 		}
-		alph[map[i][j] - 'A'] = false;
-
 	}
 
 	public static boolean canUsed(int i, int j,boolean[] alph) {
