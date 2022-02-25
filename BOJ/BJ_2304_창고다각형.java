@@ -40,7 +40,6 @@ public class BJ_2304_창고다각형  {
 				max = i; 
 			}
 		}
-//		System.out.println(idx);
 		//가장 높은 기둥을 기준으로 반큼씩 계산
 		int height =0, move = 0, sum =0; ; 
 		for (int i = 0; i <= max; i++) {
@@ -51,14 +50,12 @@ public class BJ_2304_창고다각형  {
 			}
 		}
 		sum+=tops[max].h;
-//		System.out.println(sum);
 		//가장 높은 기둥 이후의 기둥들 면적 계산
 		int idx=0;
 		height=0; move = 0;
 		for (int i =N-1; i >=max; i--) {
 			if(height < tops[i].h) {
 				sum+= (tops[move].p -tops[i].p) * height;
-//				System.out.println(sum);
 				height =tops[i].h;
 				move =i;
 				idx = i;
